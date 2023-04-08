@@ -1,0 +1,306 @@
+/* Colour scheme to base everything off. */
+:root {
+  --main-bg: #f8e9a1;
+  --secondary-bg: #f76c6c;
+  --main-blue: #a8d0e6;
+  --secondary-blue: #374785;
+  --secondary-blue-dark: #303d74;
+  --tertiary-blue: #24305e;
+
+  --main-white: rgb(246, 249, 250);
+  --secondary-white: rgb(239, 246, 248);
+  --main-black: rgb(10, 10, 10);
+  --secondary-black: rgb(23, 24, 24);
+  --shadow-black: rgba(10, 10, 10, 0.1);
+
+  --text-white: rgb(241, 241, 241);
+
+  font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+  background-color: var(--tertiary-blue);
+  color: var(--text-white);
+}
+
+.container {
+  background-color: var(--main-white);
+  color: var(--main-black);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-white);
+  color: var(--main-black);
+}
+
+/* CSS */
+.button-main {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, 0.15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 26px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-main:hover {
+  background-color: var(--secondary-blue);
+  opacity: 1;
+  scale: 1.025;
+  transform: translateY(0);
+  transition-duration: 0.35s;
+}
+
+.button-main:active {
+  transform: translateY(2px);
+  transition-duration: 0.25s;
+}
+
+.button-main:hover {
+  box-shadow: rgba(39, 174, 96, 0.2) 0 6px 12px;
+}
+
+.button-menu {
+  appearance: none;
+  height: 100%;
+  width: auto;
+  backface-visibility: hidden;
+  background-color: var(--secondary-white);
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, 0.1) 0 2px 3px;
+  box-sizing: border-box;
+  color: var(--secondary-black);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-menu:hover {
+  background-color: var(--main-blue);
+  opacity: 1;
+  scale: 1.025;
+  transform: translateY(0);
+  transition-duration: 0.35s;
+}
+
+.button-menu:active {
+  transform: translateY(2px);
+  transition-duration: 0.25s;
+}
+
+.button-menu:hover {
+  box-shadow: var(--secondary-white) 0 6px 12px;
+}
+
+.Input-text {
+  display: flex;
+  justify-content: center;
+
+  padding: 0.5em 1em;
+  color: inherit;
+  width: 100%;
+  font-family: inherit;
+  font-size: 100;
+  font-weight: inherit;
+  line-height: 2em;
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow 0.2s;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.centerForm {
+  width: 75%;
+}
+
+.contentColourMain {
+  background-color: var(--main-bg);
+  box-shadow: var(--shadow-black) 0 3px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contentCenterBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+}
+
+.imageIcon {
+  width: 20%;
+
+  animation-name: spin;
+  animation-duration: 0.55s;
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-290deg) scale(0.1);
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.loadSpinner {
+  display: block;
+  width: 10%;
+  padding: 1em;
+  animation-name: loadSpin;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.75, 0.25, 0.5, 0.75);
+}
+@keyframes loadSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1em;
+  border-radius: 1px;
+  background-color: var(--tertiary-blue);
+  box-shadow: rgba(47, 39, 85, 0.15) 0 4px 8px;
+  display: flex;
+  flex-direction: row;
+  align-content: end;
+  text-align: right;
+  padding: 0.5em;
+}
+.footer-text {
+  display: block;
+  margin-right: 2em;
+  color: rgb(155, 155, 155);
+  text-align: right;
+  width: 100%;
+  font-family: inherit;
+  font-size: 70%;
+  font-weight: inherit;
+}
+
+.headerBar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 10%;
+  max-height: 2em;
+  border-radius: 1px;
+  background-color: var(--secondary-blue);
+  box-shadow: rgba(39, 174, 96, 0.15) 0 4px 9px;
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+  align-items: start;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  width: auto;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: var(--text-white);
+  text-align: center;
+  padding: 14px 6px;
+  text-decoration: none;
+  transition-duration: 0.35s;
+}
+li a:hover {
+  background-color: var(--secondary-bg);
+  box-shadow: rgba(42, 26, 110, 0.2) 0 6px 12px;
+}
+
+.ContentWrapper {
+  background-color: rgb(98, 87, 148);
+  height: 100%;
+  width: auto;
+}
+.ContentLeft {
+  background-color: rgb(87, 148, 97);
+}
+.ContentRight {
+  background-color: rgb(144, 148, 87);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TB Web app{% block title %} {% endblock %}</title>
+
+  <link rel="stylesheet" href="{{ url_for('static',    filename='css/site.css') }}" />
+
+
+</head>
+
+<body>
+  <div class="headerBar">
+    <div class="navigation">
+      <nav>
+        <ul>
+          <li> <a href="{{ url_for('home') }}">Home</a></li>
+          <li> <a href="{{ url_for('about') }}">About</a></li>
+          <li> <a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+          <li> <a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+
+      </nav>
+    </div>
+  </div>
+  <div class="content">
+    {% block content %} {% endblock %}
+  </div>
+  <div class="footer">
+    <div class="footer-text">Created and maintained by Timothy Bermanseder</div>
+  </div>
+</body>
+
+</html>
