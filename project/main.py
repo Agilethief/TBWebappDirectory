@@ -14,12 +14,17 @@ def about():
 
 @app.route("/portfolio")
 def portfolio():
-    return render_template("about.html")
+    return render_template("portfolio.html")
 
 
 @app.route("/contact")
 def contact():
-    return render_template("about.html")
+    return render_template("contact.html")
+
+
+@app.route("/layout")
+def layout():
+    return render_template("layout.html")
 
 
 if __name__ == "__main__":
