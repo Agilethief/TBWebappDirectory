@@ -417,3 +417,19 @@ hr {
   padding-right: 14px;
   padding-left: 14px;
 }
+
+.IconList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.linkIco {
+  width: 2em;
+  padding: 12px;
+  transition-duration: 0.25s;
+}
+
+.linkIco:hover {
+  scale: 1.2;
+}
