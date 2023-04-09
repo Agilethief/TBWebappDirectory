@@ -389,3 +389,31 @@ hr {
     rgba(0, 0, 0, 0)
   );
 }
+
+.homeIcon {
+  position: relative;
+  top: -0.6em;
+  left: 0;
+}
+
+.homeIcon a {
+  color: var(--text-white);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+  align-items: center;
+  justify-content: start;
+}
+
+.homeIcon p {
+  text-align: right;
+  vertical-align: middle;
+}
+
+.homeLogo {
+  height: 9%;
+  width: 9%;
+  padding-right: 14px;
+  padding-left: 14px;
+}

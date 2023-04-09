@@ -12,13 +12,22 @@
 
 <body>
   <div class="headerBar">
+    <div class="homeIcon">
+      <a href="{{ url_for('home') }}">
+        <img class="homeLogo" src="/static/images/TBLogo.png" />
+        <p><strong>TB WEB APP</strong></p>
+      </a>
+    </div>
+
     <div class="navigation">
       <nav>
         <ul>
           <li> <a href="{{ url_for('home') }}">Home</a></li>
+          <!--
           <li> <a href="{{ url_for('about') }}">About</a></li>
           <li> <a href="{{ url_for('portfolio') }}">Portfolio</a></li>
           <li> <a href="{{ url_for('contact') }}">Contact</a></li>
+          -->
         </ul>
 
       </nav>
